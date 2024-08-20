@@ -98,7 +98,7 @@ header {
 }
 
 .headerImage img:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .headerContent {
@@ -133,6 +133,7 @@ header {
 .headerContent p {
   margin: 0.8rem 0 2rem;
   font-size: 1.1rem;
+  text-align: start;
 }
 
 .headerCta {
@@ -669,7 +670,7 @@ li.mixitup-control-active{
 
 /* ================= CONTACT =============== */
 #contact {
-  background-image: url('../assets/images/bg-img.jpg');
+  background-image: url('../assets/images/feathers.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -717,7 +718,7 @@ li.mixitup-control-active{
 }
 
 .contactList-item:hover {
-  background: var(--color-gray-900) !important;
+  background: var(--color-primary) !important;
   color: var(--color-gray-100) !important;
 }
 
@@ -725,6 +726,11 @@ li.mixitup-control-active{
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.contactForm .btn:hover{
+  background: var(--color-primary);
+  color: #fff;
 }
 
 .contactForm input,
