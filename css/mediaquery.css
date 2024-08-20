@@ -135,19 +135,27 @@
   }
 
   
-  /* PROHECTS SECTION  */
-  
-  .projectsCategories {
-      gap: 0.7rem;
-  }
-  
-  .projectsCategories li {
-      padding: 0.8rem 1rem;
-  }
-  
+  /* PROJECTS SECTION  */
+
   .projectsContainer {
-      gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    gap: 2rem;
   }
+
+  .project {
+    padding: 1rem;
+  }
+
+  .projectImage {
+    max-height: 15rem;
+    margin-bottom: 1rem;
+  }
+
+  .projectCta .btn-sm {
+    width: 8rem !important;
+    font-size: 0.8rem;
+  }
+}
   
   
   /* TESTIMONIALs SECTION  */
