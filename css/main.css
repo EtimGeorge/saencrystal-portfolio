@@ -398,6 +398,131 @@ header {
 }
 
 
+/* =============== 3D slider ==================== */
+
+.banner{
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.banner .slider{
+  position: absolute;
+  width: 200px;
+  height: 258px;
+  top: 10%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 20s linear infinite;
+  /* z-index: 2; */
+}
+
+@keyframes autoRun {
+  from{
+    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+  }
+  to{
+    transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+  }
+}
+
+.banner .slider .item{
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: rotateY(calc( 
+    (var(--position) - 1) * (360 / var(--quantity)) *1deg ))
+  translateZ(550px);
+}
+
+.banner .slider .item img{
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+
+/* .slider-controls{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+} */
+
+.banner .content{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1400px, 100vw);
+  height: max-content;
+  padding-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  /* z-index: 1; */
+}
+
+/* .banner .content h2{
+  font-size: 8em;
+  line-height: 1em;
+  color: var(--color-primary);
+  position: relative;
+} */
+
+/* .banner .content h2::after{
+  position: absolute;
+  inset: 0 0 0 0;
+  content: attr(data-content);
+  z-index: 2;
+  -webkit-text-stroke: 2px #d2d2d2 ;
+  color: transparent;
+} */
+
+.banner .content .author{
+  text-align: left;
+  max-width: 200px;
+  position: absolute;
+  bottom: -6px;
+  left: 10px;
+  /* color: var(--color-gray-400); */
+  font-size: 0.9em;
+  /* z-index: 21; */
+ 
+
+}
+
+.banner .content h3{
+  font-size: 2em;
+  
+}
+
+.banner .content p b{
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+/* .banner .content .model{
+  background-image: url('../assets/images/contactW.jpg');
+  width: 100%;
+  height:75vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-size: auto 130%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 1;
+} */
+
+/*======================== Contact Section ========================*/
+
+
 
 /*======================== Tech Stacks Section ========================*/
 /* #tech-stack {
