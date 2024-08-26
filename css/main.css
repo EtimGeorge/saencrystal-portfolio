@@ -235,6 +235,12 @@ header {
   margin-bottom: 0.8rem;
 }
 
+ .indicator{
+  font-size: small;
+  color: #f44b73;
+  align-items: start;
+}
+
 .aboutDetails .btn {
   margin-top: 2rem;
   display: flex;
@@ -290,13 +296,14 @@ header {
 
 .subCard-front {
   background-color: var(--color-bg-variant);
-  color: white;
+  color: var(--color-primary);
 }
 
 .subCard-back {
   background-color: var(--color-primary);
   color: white;
   transform: rotateY(180deg);
+  
 }
 
 .subCard h5 {
@@ -321,6 +328,37 @@ header {
 .subCards.active {
   display: flex;
   animation: fadeIn 0.5s ease-out;
+}
+
+/* ===========scrolling animation======== */
+
+.teleprompter{
+  width: 80%;
+  height: 200px;
+  overflow: hidden;
+  /* border: 2px solid #fefefe; */
+  padding: 10px;
+  position: relative;
+}
+
+.scrolling-text{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  animation: scrollUp 70s linear infinite ;
+  text-align: center;
+  line-height: 1.6;
+
+}
+
+@keyframes scrollUp {
+  0%{
+    transform: translateY(100%);
+  }
+
+  100%{
+    transform: translateY(-100%);
+  }
 }
 
 @media (max-width: 1024px) {
