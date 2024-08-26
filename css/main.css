@@ -262,7 +262,7 @@ header {
 
 .subCard {
   background: transparent;
-  width: calc(33.333% - 1rem);
+  width: calc(50.333% - 1rem);
   height: 200px;
   transition: transform 0.6s;
   transform-style: preserve-3d;
@@ -292,6 +292,7 @@ header {
   align-items: center;
   border-radius: 1rem;
   padding: 1rem;
+  
 }
 
 .subCard-front {
@@ -318,6 +319,7 @@ header {
 
 .subCard p {
   font-size: 0.9rem;
+  text-wrap: wrap;
 }
 
 @keyframes fadeIn {
@@ -336,8 +338,6 @@ header {
   width: 80%;
   height: 200px;
   overflow: hidden;
-  /* border: 2px solid #fefefe; */
-  padding: 10px;
   position: relative;
 }
 
